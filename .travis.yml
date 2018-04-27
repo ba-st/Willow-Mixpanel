@@ -11,3 +11,16 @@ matrix:
   - smalltalk: Pharo64-7.0
   - smalltalk: Pharo-7.0
   fast_finish: true
+before_deploy:
+  - cp "${SMALLTALK_CI_IMAGE}" "Willow-Mixpanel.image"
+  - cp "${SMALLTALK_CI_CHANGES}" "Willow-Mixpanel.changes"
+  - zip -q "${TRAVIS_BRANCH}-${TRAVIS_SMALLTALK_VERSION}.zip" "Willow-Mixpanel.image" "Willow-Mixpanel.changes"
+deploy:
+  provider: releases
+  api_key:
+    secure: gf5zDWaEbByHYhl8HHm0KSSQ6BUKFM2CU27xTouZBYezuDsNU4UMJ12okxPrI7pJY93Q9KNM3jxmaijk08Lu+dqJjnGVeZhnK1zsCYj4Fg2By5qcEbCBJ2G32825QKslaY9AsrS2UpkL7q4tvEVo0Pc5ht1+fNlkbVNHYzGMZ5of5A6GoBZjQ2q55ppcJv9oXRejJx7ZdjkKMrtTsvZFnyEFvaUbWrdY9fT82RNAEGXiCO0ktsVUSphn2wPV787xidiBkIWInPKS2CMeludSxJnXTF+ZGjeUgEvOgi89CcUcuQ3HWbQkZWfmwTndS8qbnUftRjkl65x8qKsNV6/0pe9UEVqSpTmHBVThBgfb8yetBkknAVOuLmehwLONFX/ZJdxIPP8A5IJAnH0hn2iDLRXZGYkG9vKqW7GDS8Z9smRnRfdV6W+wcH/Lr0mQr40X6fXBt6hBc3HIG4JpfXQbqESR2mM+S73l0wEKsQhQTVvEaB4kvT+NpF5xBaTfapRXmPsXiwuIv55X/4VIhCO9EJVbz8po+DzCeo24AlFHS7Wn9R68oh0zpNuo+mDkNy7dq3GazTLkWtJ6NO0G/sp27yeWSwEsz0V1xxI+yPPJSuWAXOQb5XLKO+m4QNrf55C4aeYlZ+WfgtikGiPWgF/R35OCFwbxJ7U4ZYIWuNV4YMo=
+  file: "${TRAVIS_BRANCH}-${TRAVIS_SMALLTALK_VERSION}.zip"
+  skip_cleanup: true
+  on:
+    repo: ba-st/Willow-Mixpanel
+    tags: true
