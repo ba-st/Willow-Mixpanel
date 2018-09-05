@@ -4,10 +4,10 @@ Extension { #name : #WebInteractionInterpreterBehavior }
 WebInteractionInterpreterBehavior >> sendToMixpanel: aBlock [
 
 	^ self
-		executeOnClient: [ :script :canvas | 
+		executeOnClient: [ :canvas | 
 			| mixpanel |
 
 			mixpanel := canvas mixpanel.
 			aBlock cull: mixpanel cull: canvas.
-			script << mixpanel ]
+			mixpanel ]
 ]
