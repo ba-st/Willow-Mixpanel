@@ -1,22 +1,33 @@
-![Logo](resources/logo128x128.png) Willow-Mixpanel
-==================================================
-![GitHub release](https://img.shields.io/github/release/ba-st/Willow-Mixpanel.svg)
-[![Build Status](https://travis-ci.org/ba-st/Willow-Mixpanel.svg?branch=master)](https://travis-ci.org/ba-st/Willow-Mixpanel)
-[![Coverage Status](https://coveralls.io/repos/github/ba-st/Willow-Mixpanel/badge.svg?branch=master)](https://coveralls.io/github/ba-st/Willow-Mixpanel?branch=master)
+<p align="center"><img src="assets/logos/128x128.png">
+ <h1 align="center">Willow-Mixpanel</h1>
+  <p align="center">
+    Integration between <a href="https://github.com/ba-st/Willow/">Willow</a> and the <a href="https://mixpanel.com/help/reference/javascript">Mixpanel Javascript API</a>
+    <br>
+    <a href="docs/"><strong>Explore the docs »</strong></a>
+    <br>
+    <br>
+    <a href="https://github.com/ba-st/Willow-Mixpanel/issues/new?labels=Type%3A+Defect">Report a defect</a>
+    |
+    <a href="https://github.com/ba-st/Willow-Mixpanel/issues/new?labels=Type%3A+Feature">Request feature</a>
+  </p>
+</p>
 
-**Integration between [Willow](https://github.com/ba-st/Willow/) and the [Mixpanel Javascript API](https://mixpanel.com/help/reference/javascript)**
+[![GitHub release](https://img.shields.io/github/release/ba-st/Willow-Mixpanel.svg)](https://github.com/ba-st/Willow-Mixpanel/releases/latest)
+[![Build Status](https://travis-ci.org/ba-st/Willow-Mixpanel.svg?branch=release-candidate)](https://travis-ci.com/ba-st/Willow-Mixpanel)
+[![Coverage Status](https://coveralls.io/repos/github/ba-st/Willow-Mixpanel/badge.svg?branch=release-candidate)](https://coveralls.io/github/ba-st/Willow-Mixpanel?branch=release-candidate)
 
-### Installation
-On Pharo 6.1 or 7 open a Playground and evaluate:
+Why would I care about this thing? When to use, for whom is designed, when not to use.
 
-```smalltalk
-Metacello new
-  baseline: 'WillowMixpanel';
-  repository: 'github://ba-st/Willow-Mixpanel:master/source';
-  load
-```
+## License
+- The code is licensed under [MIT](LICENSE).
+- The documentation is licensed under [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/).
+- The [Mixpanel Javascript API](https://github.com/mixpanel/mixpanel-js) is copyright of [Mixpanel, Inc.](https://mixpanel.com) and released under [Apache License Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-### Usage
+## Quick Start
+
+- Download the latest [Pharo 32](https://get.pharo.org/) or [64 bits VM](https://get.pharo.org/64/).
+- Download a ready to use image from the [release page](https://github.com/ba-st/Willow-Mixpanel/releases/latest)
+- Explore the [documentation](docs/)
 
 Include `WillowMixpanelMetadataLibrary` in the libraries updating the application root.
 
@@ -29,35 +40,14 @@ This will load the mixpanel support and then start tracking your events:
   button onTrigger sendToMixpanel: [:mixpanel | mixpanel track: 'User event' ]
 ```
 
-### Deployment
-In order to include Willow-Mixpanel as part of your project, you should reference the *Deployment* package in your product baseline.
-For example:
-```
-setUpDependencies: spec
+## Installation
 
-	spec
-		baseline: 'WillowMixpanel'
-			with: [ spec
-				repository: 'github://ba-st/Willow-Mixpanel:v1/source';
-				loads: #('Deployment') ];
-		import: 'WillowMixpanel'.
-```
-and
-```
-baseline: spec
+To load the project in a Pharo image, or declare it as a dependency of your own project follow this [instructions](docs/Installation.md).
 
-	<baseline>
-	spec
-		for: #common
-		do: [ self setUpDependencies: spec.
-			spec package: 'My-Package' with: [ spec requires: #('WillowMixpanel') ] ]
-```
+## Contributing
+
+Check the [Contribution Guidelines](CONTRIBUTING.md)
 
 ### Credits
 - This integration was initially made at [Mercap](https://www.mercapsoftware.com/en/) by @fortizpenaloza
 - [Pharo](https://pharo.org) and GitHub migration by @gcotelli
-
-### Legal
-- The project source code is [MIT](LICENSE) licensed. Any contribution submitted to the code repository is considered to be under the same license.
-- The documentation is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/)
-- The [Mixpanel Javascript API](https://github.com/mixpanel/mixpanel-js) is copyright of [Mixpanel, Inc.](https://mixpanel.com) and released under [Apache License Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
