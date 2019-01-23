@@ -16,8 +16,6 @@
 [![Build Status](https://travis-ci.org/ba-st/Willow-Mixpanel.svg?branch=release-candidate)](https://travis-ci.com/ba-st/Willow-Mixpanel)
 [![Coverage Status](https://coveralls.io/repos/github/ba-st/Willow-Mixpanel/badge.svg?branch=release-candidate)](https://coveralls.io/github/ba-st/Willow-Mixpanel?branch=release-candidate)
 
-Why would I care about this thing? When to use, for whom is designed, when not to use.
-
 ## License
 - The code is licensed under [MIT](LICENSE).
 - The documentation is licensed under [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/).
