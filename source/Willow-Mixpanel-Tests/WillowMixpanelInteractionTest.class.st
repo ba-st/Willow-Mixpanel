@@ -1,6 +1,6 @@
 Class {
 	#name : #WillowMixpanelInteractionTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : #'Willow-Mixpanel-Tests'
 }
 
