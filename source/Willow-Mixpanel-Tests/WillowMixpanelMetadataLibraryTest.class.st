@@ -3,7 +3,7 @@ A WillowMixpanelMetadataLibraryTest is a test class for testing the behavior of 
 "
 Class {
 	#name : #WillowMixpanelMetadataLibraryTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : #'Willow-Mixpanel-Tests'
 }
 
