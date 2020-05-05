@@ -51,9 +51,9 @@ WillowMixpanelMetadataLibrary >> loaderJs [
 
 	^ WAFileLibraryResource
 		filepath: 'loader.js'
-		mimeType: WAMimeType textJavascript
+		mimeType: ( WAMimeType main: 'application' sub: 'javascript' )
 		cacheDuration: self class defaultCacheDuration
-		contents: (GRDelayedSend receiver: self selector: #loaderJsContent)
+		contents: ( GRDelayedSend receiver: self selector: #loaderJsContent )
 ]
 
 { #category : #accesing }
