@@ -13,8 +13,11 @@
 </p>
 
 [![GitHub release](https://img.shields.io/github/release/ba-st/Willow-Mixpanel.svg)](https://github.com/ba-st/Willow-Mixpanel/releases/latest)
-[![Build Status](https://travis-ci.org/ba-st/Willow-Mixpanel.svg?branch=release-candidate)](https://travis-ci.com/ba-st/Willow-Mixpanel)
-[![Coverage Status](https://coveralls.io/repos/github/ba-st/Willow-Mixpanel/badge.svg?branch=release-candidate)](https://coveralls.io/github/ba-st/Willow-Mixpanel?branch=release-candidate)
+[![Build Status](https://github.com/ba-st/Willow-Mixpanel/workflows/Build/badge.svg?branch=release-candidate)](https://github.com/ba-st/Willow-Mixpanel/actions?query=workflow%3ABuild)
+[![Coverage Status](https://codecov.io/github/ba-st/Willow-Mixpanel/coverage.svg?branch=release-candidate)](https://codecov.io/gh/ba-st/Willow-Mixpanel/branch/release-candidate)
+[![Pharo 6.1](https://img.shields.io/badge/Pharo-6.1-informational)](https://pharo.org)
+[![Pharo 7.0](https://img.shields.io/badge/Pharo-7.0-informational)](https://pharo.org)
+[![Pharo 8.0](https://img.shields.io/badge/Pharo-8.0-informational)](https://pharo.org)
 
 ## License
 - The code is licensed under [MIT](LICENSE).
