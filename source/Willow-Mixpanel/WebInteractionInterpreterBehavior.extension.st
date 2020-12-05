@@ -4,7 +4,7 @@ Extension { #name : #WebInteractionInterpreterBehavior }
 WebInteractionInterpreterBehavior >> sendToMixpanel: aBlock [
 
 	^ self
-		executeOnClient: [ :canvas | 
+		userAgentDo: [ :canvas | 
 			| mixpanel |
 
 			mixpanel := canvas mixpanel.
