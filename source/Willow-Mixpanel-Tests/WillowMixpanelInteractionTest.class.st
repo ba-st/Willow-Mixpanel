@@ -9,7 +9,7 @@ WillowMixpanelInteractionTest >> testSendToMixpanel [
 
 	| interpreter html |
 
-	interpreter := WebInteractionInterpreter forClickOnComponent.
+	interpreter := EventInterpreterDispatcher defaultingToClick.
 	interpreter sendToMixpanel: [ :mixpanel | mixpanel track: 'Testing' ].
 	html := self apply: interpreter toComponentDefinedBy: [ :canvas | canvas button ].
 	self
