@@ -3,13 +3,13 @@ SmalltalkCISpec {
     SCIMetacelloLoadSpec {
       #baseline : 'WillowMixpanel',
       #directory : 'source',
-      #load : [ 'CI' ],
+      #load : [ 'Development' ],
       #platforms : [  #pharo ]
     }
   ],
   #testing : {
     #coverage : {
-       #packages : [ 'Willow-Mixpanel*' ],
+      #packages : [ 'Willow-Mixpanel*' ],
       #format: #lcov
     }
   }
