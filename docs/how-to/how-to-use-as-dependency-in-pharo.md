@@ -4,7 +4,7 @@ In order to include **Willow Mixpanel** as part of your project, you should refe
 the package in your product baseline:
 
 1. Define the Willow Mixpanel repository and version to be used, and the
-  [baseline groups](../reference/Baseline-groups.md)  you want to depend on
+  [baseline groups](../reference/Baseline-groups.md) you want to depend on
   (usually it will be `Deployment`).
 
     If you're unsure on what to depend use the *Dependency Analyzer*
