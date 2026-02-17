@@ -1,24 +1,25 @@
 Class {
-	#name : #SessionStartTrackingCommand,
-	#superclass : #MixpanelEventTrackingCommand,
+	#name : 'SessionStartTrackingCommand',
+	#superclass : 'MixpanelEventTrackingCommand',
 	#instVars : [
 		'trackingCustomization'
 	],
-	#category : #'Willow-Mixpanel'
+	#category : 'Willow-Mixpanel',
+	#package : 'Willow-Mixpanel'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 SessionStartTrackingCommand class >> configuredBy: aTrackingCustomization [
 
 	^ super new initializeConfiguredBy: aTrackingCustomization
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 SessionStartTrackingCommand class >> new [
 	^ self configuredBy: [  ]
 ]
 
-{ #category : #processing }
+{ #category : 'processing' }
 SessionStartTrackingCommand >> applyTo: anHTMLDocument on: aCanvas [
 	| script |
 	
@@ -32,7 +33,7 @@ SessionStartTrackingCommand >> applyTo: anHTMLDocument on: aCanvas [
 	anHTMLDocument addLoadScript: script
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 SessionStartTrackingCommand >> initializeConfiguredBy: aTrackingCustomization [
 
 	trackingCustomization := aTrackingCustomization

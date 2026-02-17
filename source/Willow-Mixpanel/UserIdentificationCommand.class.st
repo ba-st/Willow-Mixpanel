@@ -1,21 +1,22 @@
 Class {
-	#name : #UserIdentificationCommand,
-	#superclass : #MixpanelEventTrackingCommand,
+	#name : 'UserIdentificationCommand',
+	#superclass : 'MixpanelEventTrackingCommand',
 	#instVars : [
 		'distinctIDProvider',
 		'setOnceParametersProvider'
 	],
-	#category : #'Willow-Mixpanel'
+	#category : 'Willow-Mixpanel',
+	#package : 'Willow-Mixpanel'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 UserIdentificationCommand class >> identifiedBy: aDistinctIDProvider storingTheFirstTime: aSetOnceParametersProvider [
 	^ self new
 		initializeIdentifyedBy: aDistinctIDProvider
 		storingTheFirstTime: aSetOnceParametersProvider
 ]
 
-{ #category : #processing }
+{ #category : 'processing' }
 UserIdentificationCommand >> applyTo: anHTMLDocument on: aCanvas [
 	| script |
 	
@@ -29,7 +30,7 @@ UserIdentificationCommand >> applyTo: anHTMLDocument on: aCanvas [
 	anHTMLDocument addLoadScript: script
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 UserIdentificationCommand >> initializeIdentifyedBy: aDistinctIDProvider storingTheFirstTime: aSetOnceParametersProvider [
 
 	distinctIDProvider := aDistinctIDProvider.

@@ -1,6 +1,6 @@
-Extension { #name : #WARenderer }
+Extension { #name : 'WARenderer' }
 
-{ #category : #'*Willow-Mixpanel' }
+{ #category : '*Willow-Mixpanel' }
 WARenderer >> mixpanel [
 
 	^ MixpanelNamespace new

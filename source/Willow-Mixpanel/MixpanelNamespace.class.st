@@ -1,13 +1,14 @@
 Class {
-	#name : #MixpanelNamespace,
-	#superclass : #JSObject,
+	#name : 'MixpanelNamespace',
+	#superclass : 'JSObject',
 	#pools : [
 		'Willow'
 	],
-	#category : #'Willow-Mixpanel'
+	#category : 'Willow-Mixpanel',
+	#package : 'Willow-Mixpanel'
 }
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 MixpanelNamespace class >> initialize [
 
 	<ignoreForCoverage>
@@ -24,20 +25,20 @@ MixpanelNamespace class >> initialize [
 		bind: #trackLinks to: 'track_links'
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MixpanelNamespace >> call: aString withArguments: anArray [
 
 	^(super call: aString withArguments: anArray)
 		condition: (self class new typeOf notIdenticalTo: JSStream undefined greaseString)
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MixpanelNamespace >> constants [
 
 	^ super constants >> #mixpanel
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelNamespace >> createAlias: aUniqueIdentifier [
 
 	"Create an alias, which Mixpanel will use to link two distinct_ids going forward (not retroactively). 
@@ -46,7 +47,7 @@ MixpanelNamespace >> createAlias: aUniqueIdentifier [
 	^ self call: self constants >> #alias with: aUniqueIdentifier
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelNamespace >> identify: aUniqueIdentifier [
 
 	"Identify a user with a unique ID instead of a Mixpanel randomly generated distinct_id. 
@@ -55,13 +56,13 @@ MixpanelNamespace >> identify: aUniqueIdentifier [
 	^ self call: self constants >> #identify with: aUniqueIdentifier
 ]
 
-{ #category : #printing }
-MixpanelNamespace >> javascriptContentOn: aStream [
+{ #category : 'printing' }
+MixpanelNamespace >> javascriptContentOn: aRenderer [
 
-	aStream nextPutAll: self constants >> #mixpanel
+	aRenderer document identifier: self constants >> #mixpanel
 ]
 
-{ #category : #accesing }
+{ #category : 'accesing' }
 MixpanelNamespace >> people [
 
 	| userProfile |
@@ -72,7 +73,7 @@ MixpanelNamespace >> people [
 	^userProfile
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelNamespace >> register: propertiesSet [
 
 	"Register a set of super properties, which are included with all events. 
@@ -81,7 +82,7 @@ MixpanelNamespace >> register: propertiesSet [
 	^ self call: self constants >> #register with: propertiesSet
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelNamespace >> registerOnce: propertiesSet [
 
 	"Register a set of super properties only once. 
@@ -90,37 +91,37 @@ MixpanelNamespace >> registerOnce: propertiesSet [
 	^ self call: self constants >> #registerOnce with: propertiesSet
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelNamespace >> timeEvent: anEventName [
 
 	^ self call: self constants >> #timeEvent with: anEventName
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelNamespace >> track: anEventName [
 
 	^ self call: self constants >> #track with: anEventName
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelNamespace >> track: anEventName whenClicked: aDOMQuery [
 
 	^ self call: self constants >> #trackLinks with: aDOMQuery with: anEventName
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelNamespace >> track: anEventName whenSubmitted: aDOMQuery [
 
 	^ self call: self constants >> #trackForms with: aDOMQuery with: anEventName
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelNamespace >> track: anEventName with: propertiesSet [
 
 	^ self call: self constants >> #track with: anEventName with: propertiesSet
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelNamespace >> track: anEventName with: propertiesSet whenClicked: aDOMQuery [
 
 	^ self
@@ -130,7 +131,7 @@ MixpanelNamespace >> track: anEventName with: propertiesSet whenClicked: aDOMQue
 		with: propertiesSet
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelNamespace >> track: anEventName with: propertiesSet whenSubmitted: aDOMQuery [
 
 	^ self
