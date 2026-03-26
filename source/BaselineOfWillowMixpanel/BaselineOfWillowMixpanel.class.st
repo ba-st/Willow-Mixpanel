@@ -1,10 +1,11 @@
 Class {
-	#name : #BaselineOfWillowMixpanel,
-	#superclass : #BaselineOf,
-	#category : #BaselineOfWillowMixpanel
+	#name : 'BaselineOfWillowMixpanel',
+	#superclass : 'BaselineOf',
+	#category : 'BaselineOfWillowMixpanel',
+	#package : 'BaselineOfWillowMixpanel'
 }
 
-{ #category : #baselines }
+{ #category : 'baselines' }
 BaselineOfWillowMixpanel >> baseline: spec [
 
 	<baseline>
@@ -21,23 +22,23 @@ BaselineOfWillowMixpanel >> baseline: spec [
 			]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 BaselineOfWillowMixpanel >> projectClass [
 
 	^ MetacelloCypressBaselineProject
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BaselineOfWillowMixpanel >> setUpDependencies: spec [
 
 	spec
-		baseline: 'Willow' with: [ spec repository: 'github://ba-st/Willow:v15' ];
+		baseline: 'Willow' with: [ spec repository: 'github://ba-st/Willow:v16' ];
 		project: 'Willow-Deployment' copyFrom: 'Willow' with: [ spec loads: 'Deployment' ];
 		project: 'Willow-SUnit' copyFrom: 'Willow' with: [ spec loads: 'Dependent-SUnit-Extensions' ];
 		project: 'Willow-Tools' copyFrom: 'Willow' with: [ spec loads: 'Tools' ]
 ]
 
-{ #category : #baselines }
+{ #category : 'baselines' }
 BaselineOfWillowMixpanel >> setUpPackages: spec [
 
 	spec

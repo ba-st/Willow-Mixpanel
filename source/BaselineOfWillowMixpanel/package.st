@@ -1,1 +1,1 @@
-Package { #name : #BaselineOfWillowMixpanel }
+Package { #name : 'BaselineOfWillowMixpanel' }

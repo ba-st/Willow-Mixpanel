@@ -1,10 +1,11 @@
 Class {
-	#name : #UnexpectedSessionEndTrackingCommand,
-	#superclass : #MixpanelEventTrackingCommand,
-	#category : #'Willow-Mixpanel'
+	#name : 'UnexpectedSessionEndTrackingCommand',
+	#superclass : 'MixpanelEventTrackingCommand',
+	#category : 'Willow-Mixpanel',
+	#package : 'Willow-Mixpanel'
 }
 
-{ #category : #processing }
+{ #category : 'processing' }
 UnexpectedSessionEndTrackingCommand >> applyTo: anHTMLDocument on: aCanvas [
 	| trackSessionEnd callback script |
 	

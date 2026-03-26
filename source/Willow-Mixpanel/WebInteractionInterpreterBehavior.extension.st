@@ -1,6 +1,6 @@
-Extension { #name : #WebInteractionInterpreterBehavior }
+Extension { #name : 'WebInteractionInterpreterBehavior' }
 
-{ #category : #'*Willow-Mixpanel' }
+{ #category : '*Willow-Mixpanel' }
 WebInteractionInterpreterBehavior >> sendToMixpanel: aBlock [
 
 	^ self

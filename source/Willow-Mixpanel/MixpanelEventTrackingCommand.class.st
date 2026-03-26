@@ -1,19 +1,20 @@
 Class {
-	#name : #MixpanelEventTrackingCommand,
-	#superclass : #Object,
+	#name : 'MixpanelEventTrackingCommand',
+	#superclass : 'Object',
 	#pools : [
 		'Willow'
 	],
-	#category : #'Willow-Mixpanel'
+	#category : 'Willow-Mixpanel',
+	#package : 'Willow-Mixpanel'
 }
 
-{ #category : #processing }
+{ #category : 'processing' }
 MixpanelEventTrackingCommand >> applyTo: aComponent on: aCommand [
 
 	self subclassResponsibility
 ]
 
-{ #category : #processing }
+{ #category : 'processing' }
 MixpanelEventTrackingCommand >> trackingParametersConfiguredBy: aBlock [
 
 	| parameters |

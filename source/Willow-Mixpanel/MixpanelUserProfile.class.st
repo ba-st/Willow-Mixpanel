@@ -1,22 +1,23 @@
 Class {
-	#name : #MixpanelUserProfile,
-	#superclass : #JSDecoration,
-	#category : #'Willow-Mixpanel'
+	#name : 'MixpanelUserProfile',
+	#superclass : 'JSDecoration',
+	#category : 'Willow-Mixpanel',
+	#package : 'Willow-Mixpanel'
 }
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelUserProfile >> add: aValue ifAbsentTo: aPropertyName [
 
 	^ owner call: 'union' with: aPropertyName with: aValue
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelUserProfile >> append: aValue to: aPropertyName [
 
 	^ owner call: 'append' with: aPropertyName with: aValue
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelUserProfile >> at: aPropertyName ifAbsentPut: aValue [
 
 	^ self
@@ -26,7 +27,7 @@ MixpanelUserProfile >> at: aPropertyName ifAbsentPut: aValue [
 				yourself)
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelUserProfile >> at: aPropertyName put: aValue [
 
 	^ self
@@ -36,49 +37,49 @@ MixpanelUserProfile >> at: aPropertyName put: aValue [
 				yourself)
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelUserProfile >> clearCharges [
 
 	^ owner call: 'clear_charges'
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelUserProfile >> deleteUser [
 
 	^ owner call: 'delete_user'
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelUserProfile >> increment: aPropertyNameOrJSObject [
 
 	^ owner call: 'increment' with: aPropertyNameOrJSObject
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelUserProfile >> increment: aPropertyName by: anInteger [
 
 	^ owner call: 'increment' with: aPropertyName with: anInteger
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelUserProfile >> setProperties: aJSObject [
 
 	^ owner call: 'set' with: aJSObject
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelUserProfile >> setPropertiesIfAbsent: aJSObject [
 
 	^ owner call: 'set_once' with: aJSObject
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelUserProfile >> trackCharge: anInteger [
 
 	^ owner call: 'track_charge' with: anInteger
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelUserProfile >> trackCharge: anInteger on: aDateAndTime [
 
 	^ owner
@@ -90,7 +91,7 @@ MixpanelUserProfile >> trackCharge: anInteger on: aDateAndTime [
 				yourself)
 ]
 
-{ #category : #methods }
+{ #category : 'methods' }
 MixpanelUserProfile >> unsetProperties: aPropertyNameOrArray [
 
 	^ owner call: 'unset' with: aPropertyNameOrArray

@@ -1,1 +1,1 @@
-Package { #name : #'Willow-Mixpanel' }
+Package { #name : 'Willow-Mixpanel' }
